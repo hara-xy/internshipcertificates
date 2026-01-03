@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hara XY - Internship Certificate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px;
+        }
+        .certificate {
+            background: #fff;
+            width: 100%; max-width: 900px;
+            min-height: 650px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #0f5d9a;
+        }
+        .header {
+            background: linear-gradient(135deg, #0f5d9a 0%, #1e3a8a 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 5px; background: linear-gradient(90deg, gold, #ffd700, gold);
+        }
+        .header h1 { font-size: 2.5em; font-weight: 700; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header h2 { font-size: 1.8em; font-weight: 400; opacity: 0.95; }
+        .content {
+            padding: 50px 40px;
+            display: grid; grid-template-columns: 1fr 0.4fr; gap: 40px;
+            position: relative;
+        }
+        .main-text {
+            line-height: 1.7;
+            color: #333;
+        }
+        .name { font-size: 2.2em; font-weight: 700; color: #0f5d9a; margin: 20px 0; text-align: center; }
+        .company { font-size: 1.3em; font-weight: 600; color: #1e3a8a; margin-bottom: 15px; }
+        .dates { font-size: 1.1em; font-weight: 500; color: #666; margin-bottom: 25px; }
+        .role { font-size: 1.15em; color: #0f5d9a; font-weight: 600; margin-bottom: 20px; }
+        .skills { 
+            background: linear-gradient(135deg, #e3f2fd, #f5f9ff);
+            padding: 20px; border-radius: 12px; margin: 25px 0;
+            border-left: 5px solid #0f5d9a;
+        }
+        .skills h4 { color: #0f5d9a; margin-bottom: 12px; font-size: 1.1em; }
+        .skills-list { list-style: none; }
+        .skills-list li { 
+            padding: 6px 0; 
+            position: relative; 
+            padding-left: 25px;
+        }
+        .skills-list li::before {
+            content: '✓'; color: #28a745; font-weight: bold; font-size: 1.2em;
+            position: absolute; left: 0;
+        }
+        .signature-section {
+            display: flex; flex-direction: column; justify-content: space-between;
+            height: 100%;
+        }
+        .signature {
+            margin-top: 60px;
+            text-align: center;
+        }
+        .signature-line {
+            height: 2px; width: 120px; background: #333;
+            margin: 0 auto 15px; border-radius: 2px;
+        }
+        .signature-name { font-weight: 600; font-size: 1em; color: #333; }
+        .signature-title { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .issue-date { font-size: 0.95em; color: #555; margin-top: 20px; }
+        .seal {
+            width: 100px; height: 100px;
+            border-radius: 50%; background: radial-gradient(circle, gold 30%, #ffd700 50%, #ffed4a 70%);
+            margin: 30px auto 0;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(255,215,0,0.4);
+            animation: pulse 2s infinite;
+        }
+        .seal::before {
+            content: 'HARA XY'; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            font-weight: 700; font-size: 11px; color: #b8860b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .footer {
+            background: #f8f9fa; padding: 20px; text-align: center;
+            border-top: 3px solid #0f5d9a;
+        }
+        .footer-line { height: 2px; width: 80%; margin: 0 auto 15px; background: linear-gradient(90deg, #0f5d9a, #1e3a8a); border-radius: 2px; }
+        .certificate-id { font-size: 0.85em; color: #666; font-weight: 500; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @media print { body { background: white; } .certificate { box-shadow: none; border: 1px solid #ccc; } }
+        @media (max-width: 768px) {
+            .content { grid-template-columns: 1fr; gap: 30px; padding: 30px 20px; }
+            .certificate { min-height: auto; margin: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="header">
+            <h1>INTERNSHIP CERTIFICATE</h1>
+            <h2>Hara XY Innovation Lab Pvt Ltd</h2>
+        </div>
+        
+        <div class="content">
+            <div class="main-text">
+                <p style="font-size: 1.1em; margin-bottom: 30px; text-align: center;">
+                    This is to certify that
+                </p>
+                <div class="name">DEEPRAJ SINGH</div>
+                
+                <div class="dates">
+                    successfully completed internship from <strong>Dec 22, 2025</strong> to <strong>Jan 02, 2026</strong>
+                </div>
+                
+                <div class="role">as Enterprise Sales Intern</div>
+                
+                <div class="skills">
+                    <h4>Key Skills Acquired:</h4>
+                    <ul class="skills-list">
+                        <li>Requirement Engineering</li>
+                        <li>Call Pitch Writing</li>
+                        <li>Fullstack Desktop Development</li>
+                    </ul>
+                </div>
+                
+                <p style="margin: 25px 0; line-height: 1.8;">
+                    demonstrated exceptional dedication, professionalism, and eagerness to learn. 
+                    Contributed significantly to team projects and gained valuable practical experience.
+                </p>
+                
+                <p style="font-style: italic; color: #555; font-size: 1em;">
+                    We wish Deepraj continued success in all future endeavors.
+                </p>
+            </div>
+            
+            <div class="signature-section">
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">Shivangouda Rajendragouda Patil</div>
+                    <div class="signature-title">Managing Director</div>
+                    <div class="issue-date">02/01/2026</div>
+                </div>
+                
+                <div class="seal"></div>
+                <div style="font-size: 0.8em; color: #999; text-align: center; margin-top: 10px;">
+                    Company Seal
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-line"></div>
+            <div class="certificate-id">Certificate ID: HXY-INT-2026-001</div>
+        </div>
+    </div>
+
+    <script>
+        // Print functionality
+        window.print = () => {
+            window.open('', '_blank').document.write(document.documentElement.outerHTML);
+        };
+        
+        // Add QR code placeholder (replace with actual QR generator)
+        const qr = document.createElement('div');
+        qr.style.cssText = 'position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #666;';
+        qr.textContent = 'QR\nVERIFY';
+        document.querySelector('.header').appendChild(qr);
+    </script>
+</body>
+</html>
