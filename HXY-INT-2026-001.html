@@ -172,17 +172,28 @@
         </div>
     </div>
 
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script>
         // Print functionality
         window.print = () => {
             window.open('', '_blank').document.write(document.documentElement.outerHTML);
         };
         
-        // Add QR code placeholder (replace with actual QR generator)
-        const qr = document.createElement('div');
-        qr.style.cssText = 'position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #666;';
-        qr.textContent = 'QR\nVERIFY';
-        document.querySelector('.header').appendChild(qr);
+        // Add QR code for verification
+        const headerDiv = document.querySelector('.header');
+        const qrContainer = document.createElement('div');
+        qrContainer.style.cssText = 'position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;';
+        headerDiv.appendChild(qrContainer);
+        
+        // Generate QR code for the certificate verification URL
+        new QRCode(qrContainer, {
+            text: "https://hara-xy.com/internshipcertificates/HXY-INT-2026-001.html",
+            width: 70,
+            height: 70,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
     </script>
 </body>
 </html>
