@@ -124,30 +124,33 @@
                 <p style="font-size: 1.1em; margin-bottom: 30px; text-align: center;">
                     This is to certify that
                 </p>
-                <div class="name">DEEPRAJ SINGH</div>
+                <div class="name">USHA RAJENDRAGOUDA PATIL</div>
                 
                 <div class="dates">
-                    successfully completed internship from <strong>Dec 22, 2025</strong> to <strong>Jan 02, 2026</strong>
+                    successfully completed internship during <strong>Winter 2025</strong>
                 </div>
                 
-                <div class="role">as Enterprise Sales Intern</div>
+                <div class="role">as Environmental Engineering Intern</div>
                 
                 <div class="skills">
                     <h4>Key Skills Acquired:</h4>
                     <ul class="skills-list">
-                        <li>Requirement Engineering</li>
-                        <li>Call Pitch Writing</li>
-                        <li>Fullstack Desktop Development</li>
+                        <li>Environmental Monitoring Solutions</li>
+                        <li>Sustainability Projects</li>
+                        <li>Water Quality Modeling</li>
+                        <li>Air Pollution Analysis</li>
+                        <li>EIA (Environmental Impact Assessment)</li>
                     </ul>
                 </div>
                 
                 <p style="margin: 25px 0; line-height: 1.8;">
-                    demonstrated exceptional dedication, professionalism, and eagerness to learn. 
-                    Contributed significantly to team projects and gained valuable practical experience.
+                    Usha Rajendragouda Patil, pursuing B.E. in Environmental Engineering, 
+                    has successfully completed her internship at Hara XY Innovation Lab Pvt Ltd. 
+                    During her tenure, she applied environmental monitoring solutions and worked on sustainability projects.
                 </p>
                 
                 <p style="font-style: italic; color: #555; font-size: 1em;">
-                    We wish Deepraj continued success in all future endeavors.
+                    We wish Usha continued success in all future endeavors.
                 </p>
             </div>
             
@@ -168,12 +171,15 @@
         
         <div class="footer">
             <div class="footer-line"></div>
-            <div class="certificate-id">Certificate ID: HXY-INT-2026-001</div>
+            <div class="certificate-id">Certificate ID: HXY-INT-2026-002</div>
         </div>
     </div>
     
-    <!-- Button for downloading certificate -->
-    <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <!-- Buttons for downloading resume and certificate -->
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 30px;">
+        <button onclick="downloadResume()" style="background: linear-gradient(135deg, #28a745, #218838); color: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-size: 1em; font-weight: 600; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); transition: all 0.3s ease;">
+            Download Resume
+        </button>
         <button onclick="downloadCertificate()" style="background: linear-gradient(135deg, #0f5d9a, #1e3a8a); color: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-size: 1em; font-weight: 600; box-shadow: 0 4px 15px rgba(15, 93, 154, 0.3); transition: all 0.3s ease;">
             Download Certificate
         </button>
@@ -186,6 +192,19 @@
         // Print functionality
         window.print = () => {
             window.open('', '_blank').document.write(document.documentElement.outerHTML);
+        };
+        
+        // Function to download the existing resume PDF
+        function downloadResume() {
+            // Create a temporary link to download the existing PDF
+            const link = document.createElement('a');
+            link.href = 'usha_resume.pdf';
+            link.download = 'Usha_Rajendragouda_Patil_Resume.pdf';
+            
+            // Trigger the download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         };
         
         // Function to download certificate as PDF using jsPDF
@@ -227,7 +246,7 @@
                 }
                 
                 // Save the PDF
-                pdf.save('HXY-INT-2026-001_Certificate.pdf');
+                pdf.save('HXY-INT-2026-002_Certificate.pdf');
             }).catch(error => {
                 console.error('Error generating PDF:', error);
                 // Fallback to print functionality
@@ -239,12 +258,13 @@
         // Add QR code for verification
         const headerDiv = document.querySelector('.header');
         const qrContainer = document.createElement('div');
+        qrContainer.className = 'qr-code-placeholder';
         qrContainer.style.cssText = 'position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;';
         headerDiv.appendChild(qrContainer);
         
         // Generate QR code for the certificate verification URL
         new QRCode(qrContainer, {
-            text: "https://hara-xy.com/internshipcertificates/HXY-INT-2026-001.html",
+            text: "https://hara-xy.com/internshipcertificates/HXY-INT-2026-002.html",
             width: 70,
             height: 70,
             colorDark: "#000000",
